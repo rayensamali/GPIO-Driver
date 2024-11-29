@@ -1,0 +1,58 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\XclFileGenerator.exe" $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$out
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\SourceIndexer.exe" $flags
+  depfile = $out.dep
+  deps = gcc
+  description = IAR_NEW_TOOL+++INDEXER+++$out
+
+rule MAKEBROWSE
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\makeBrowseData.exe" $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out
+
+rule PDBLINK
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\PbdLink.exe" $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out
+
+
+
+#Build steps
+build C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.xcl : COMPILER_XCL 
+    flags = C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\gpio.c -D USE_STDPERIPH_DRIVER -D STM32F4XX -o C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\Obj\User_4889033380472473340.dir --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\..\ -I C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\..\..\Libraries\CMSIS\Include\ -I C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\..\..\Libraries\CMSIS\ST\STM32F4xx\Include\ -On --use_c++_inline --predef_macros C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.tmp
+    rspfile_name = C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.xcl.rsp
+    xclcommand = -source_file C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\gpio.c -xcl_file C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.xcl -macro_file C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\bin\iccarm.exe"
+
+build C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.xcl : COMPILER_XCL 
+    flags = C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\main.c -D USE_STDPERIPH_DRIVER -D STM32F4XX -o C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\Obj\User_4889033380472473340.dir --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\..\ -I C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\..\..\Libraries\CMSIS\Include\ -I C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\..\..\Libraries\CMSIS\ST\STM32F4xx\Include\ -On --use_c++_inline --predef_macros C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.tmp
+    rspfile_name = C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.xcl.rsp
+    xclcommand = -source_file C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\main.c -xcl_file C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.xcl -macro_file C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\bin\iccarm.exe"
+
+build C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.xcl : COMPILER_XCL 
+    flags = C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\system_stm32f4xx.c -D USE_STDPERIPH_DRIVER -D STM32F4XX -o C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\Obj\User_4889033380472473340.dir --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\..\ -I C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\..\..\Libraries\CMSIS\Include\ -I C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\..\..\Libraries\CMSIS\ST\STM32F4xx\Include\ -On --use_c++_inline --predef_macros C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.tmp
+    rspfile_name = C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.xcl.rsp
+    xclcommand = -source_file C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\system_stm32f4xx.c -xcl_file C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.xcl -macro_file C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\bin\iccarm.exe"
+
+build C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.pbi : INDEXER C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.xcl | C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\gpio.c
+    flags = -out=C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.pbi -f C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.xcl
+
+build C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.pbi : INDEXER C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.xcl | C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\main.c
+    flags = -out=C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.pbi -f C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.xcl
+
+build C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.pbi : INDEXER C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.xcl | C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\system_stm32f4xx.c
+    flags = -out=C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.pbi -f C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.xcl
+
+build C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbw : MAKEBROWSE C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbd
+    flags = C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbd -output C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbw
+
+build C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbd : PDBLINK C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.pbi | C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.pbi $
+ C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.pbi
+    flags = -M C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbd C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\gpio.pbi C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\main.pbi C$:\Users\black\OneDrive\Bureau\rr\Seance_3\Project_Libraires\Project\EWARM\Lab\BrowseInfo\User_4889033380472473340.dir\system_stm32f4xx.pbi
+

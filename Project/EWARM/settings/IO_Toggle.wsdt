@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>IO_Toggle/Lab</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Build>
+        
+        
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Debug-Log</Factory></Window></Windows></PreferedWindows><ColumnWidth0>25</ColumnWidth0><ColumnWidth1>210</ColumnWidth1><ColumnWidth2>25</ColumnWidth2><ColumnWidth3>25</ColumnWidth3></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>212</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+    <TerminalIO/><Debug-Log><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Build</Factory></Window></Windows></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1056</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-10644-8336</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>IO_Toggle</ExpandedNode><ExpandedNode>IO_Toggle/EWARM</ExpandedNode><ExpandedNode>IO_Toggle/Output</ExpandedNode><ExpandedNode>IO_Toggle/STM32F4-Discovery</ExpandedNode><ExpandedNode>IO_Toggle/User</ExpandedNode><ExpandedNode>IO_Toggle/User/gpio.c</ExpandedNode><ExpandedNode>IO_Toggle/User/gpio.c/Output</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3><Tabs><Tab><Identity>TabID-15612-4021</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab><Tab><Identity>TabID-30476-16397</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\main.c</Filename><XPos>0</XPos><YPos>45</YPos><SelStart>1910</SelStart><SelEnd>1910</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\gpio.c</Filename><XPos>14</XPos><YPos>60</YPos><SelStart>2534</SelStart><SelEnd>2534</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\gpio.h</Filename><XPos>0</XPos><YPos>58</YPos><SelStart>1377</SelStart><SelEnd>1377</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-054b4928><key>iaridepm.enu1</key></Toolbar-054b4928></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>766</Bottom><Right>286</Right><x>-2</x><y>-2</y><xscreen>278</xscreen><yscreen>196</yscreen><sizeHorzCX>290188</sizeHorzCX><sizeHorzCY>196590</sizeHorzCY><sizeVertCX>300626</sizeVertCX><sizeVertCY>770311</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>186</Bottom><Right>960</Right><x>-2</x><y>-2</y><xscreen>962</xscreen><yscreen>188</yscreen><sizeHorzCX>1004175</sizeHorzCX><sizeHorzCY>188566</sizeHorzCY><sizeVertCX>231733</sizeVertCX><sizeVertCY>188566</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
